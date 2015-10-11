@@ -1,6 +1,7 @@
 import sdl2.ext
-import Colors
-from Configuration import *
+
+import tetris.configuration.Colors
+from tetris.configuration.Configuration import *
 
 
 class GameBoard(object):
@@ -107,7 +108,7 @@ class Block(sdl2.ext.Entity):
         self.boardcoordinates = BoardCoordinates(center, offset)
         posx = self.boardcoordinates.pos[0] * block_width
         posy = self.boardcoordinates.pos[1]-2 * block_height
-        self.sprite = factory.from_color(Colors.WHITE, size=(block_width, block_height))
+        self.sprite = factory.from_color(tetris.configuration.Colors.WHITE, size=(block_width, block_height))
         self.sprite.position = (posx, posy)
         sdl2.ext.fill(self.sprite, color, (1, 1, block_width-2, block_height-2))
 

@@ -1,3 +1,5 @@
+import os
+
 
 def window_height():
     return 420
@@ -13,3 +15,7 @@ def num_rows():
 
 def num_columns():
     return 10
+
+
+def font_path():
+    return os.path.join(os.environ["windir"],"Fonts","Arial.ttf")

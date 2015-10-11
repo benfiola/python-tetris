@@ -1,6 +1,6 @@
-from GameSystems import *
-from TetrisComponent import *
-import MenuComponent
+from tetris.game.GameSystems import *
+from tetris.AbstractComponents import *
+import tetris.menu.mainmenu.Component
 
 class Game(Component):
     def __init__(self, window, world):
@@ -41,4 +41,4 @@ class Game(Component):
                 self.current_piece.movementinput.rotate_cw = True
             elif event.key.keysym.sym == sdl2.SDLK_ESCAPE:
                 self.handing_off = True
-                self.next_state_class = MenuComponent.Menu
+                self.next_state_class = tetris.menu.mainmenu.Component.Menu

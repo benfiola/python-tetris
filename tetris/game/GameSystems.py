@@ -1,13 +1,13 @@
-import sdl2.ext
 import datetime
 import random
-from Configuration import *
-import Colors
-from GameEntities import *
+
+import sdl2.ext
 from sdl2 import *
-from sdl2.ext import Resources
 from sdl2.ext.compat import byteify
 from sdl2.sdlmixer import *
+
+import tetris.configuration.Colors
+from GameEntities import *
 
 
 class GameRenderer(sdl2.ext.SoftwareSpriteRenderSystem):
@@ -211,9 +211,9 @@ class Generator():
         self.piece_map[6] = ZPiece
 
         self.color_map = [None for x in range(3)]
-        self.color_map[0] = Colors.RED
-        self.color_map[1] = Colors.GREEN
-        self.color_map[2] = Colors.BLUE
+        self.color_map[0] = tetris.configuration.Colors.RED
+        self.color_map[1] = tetris.configuration.Colors.GREEN
+        self.color_map[2] = tetris.configuration.Colors.BLUE
 
     def create_piece(self):
         piece_num = random.randrange(7)

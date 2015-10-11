@@ -1,9 +1,11 @@
-import PreInit
-from Configuration import *
 import sys
+from PreInit import *
 import sdl2
 import sdl2.ext
-from MenuComponent import Menu
+
+from tetris.configuration.Configuration import *
+from tetris.menu.mainmenu.Component import Menu
+
 
 def run():
     sdl2.ext.init()
